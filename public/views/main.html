@@ -47,18 +47,21 @@
     <form class="col s12 card-panel teal green lighten-1 white-text ">
         <div class="row">
             <div class="input-field col s6">
-                <p>Quantitité</p>
+                <p>Quantité</p>
             </div>
             <div class="input-field col s6">
-                <a class="btn-floating btn-large waves-effect waves-light red">
-                    <i class="material-icons">add</i>
-                </a>
-
-                <a class="btn-floating btn-large waves-effect waves-light red">
-                    <i class="material-icons">add</i>
-                </a>
+                <form id='myform' method='POST' action='#' class="row ">
+                  <div class="input-field col s2">
+                    <input id='minus' type='button' value='-' class='btn-floating btn-large waves-effect waves-light green darken-3 white-text'  field='quantity'/>
+                    </div>
+                    <div class="input-field col s2">
+                    <input type='text' name='quantity' value='0' class='qty white-text'/>
+                    </div>
+                    <div class="input-field col s2">
+                    <input id='plus' type='button' value='+' class='btn-floating btn-large waves-effect waves-light green darken-3 white-text' field='quantity'/>
+                    </div>
+                </form>
             </div>
-
         </div>
     </form>
 
