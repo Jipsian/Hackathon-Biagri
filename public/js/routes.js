@@ -7,7 +7,8 @@ const routes = ($routeProvider, $httpProvider) => {
             controllerAs: 'vm'
         })
         .when('/agri', {
-            templateUrl: 'views/agriculteur.html'
+            templateUrl: 'views/agriculteur.html',
+            controller: 'mainController'
         })
         .otherwise({
             redirectTo: '/'
