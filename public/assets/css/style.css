@@ -12,3 +12,15 @@
 {
   border-bottom: none;
 }
+
+/*SEPARATION*/
+
+.card-panel.teal.deep-orange.accent-3.white-text, .col.s12.card-panel.white.orange-text.text-darken-4, .col.s12.card-panel.teal.orange.lighten-2.white-text
+{
+  margin: 0;
+  box-shadow: none;
+  padding: 1px 1px 1px 1px;
+  font-weight: bold;
+}
+
+.col.s12.card-panel.white.orange-text.text-darken-4, .col.s12.card-panel.teal.orange.lighten-2.white-text
