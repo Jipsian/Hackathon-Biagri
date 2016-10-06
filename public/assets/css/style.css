@@ -1,4 +1,9 @@
-.green-text.align.center
+.logo
 {
-  border:2px solid #66bb6a;
+  width: 40%;
+}
+
+.card-panel.teal.green.darken-3.white-text, .col.s12.card-panel.teal.green.lighten-1.white-text, .col.s12.card-panel.teal.green.darken-3.white-text
+{
+  margin: 0;
 }
