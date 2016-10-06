@@ -44,8 +44,7 @@ h3
 
 .col.s12.card-panel.teal.white.green-text.text-darken-3, .col.s12.card-panel.teal.green.darken-3.white-text, .col.s12.card-panel.teal.white.green-text.text-darken-3, .col.s12.card-panel.teal.green.darken-3.white-text
 {
-  border-left:  2px solid green;
-  border-right:  2px solid green;
+  border:  2px solid green;
 }
 
 /*SEPARATION*/
@@ -57,5 +56,3 @@ h3
   padding: 1px 1px 1px 1px;
   font-weight: bold;
 }
-
-.col.s12.card-panel.white.orange-text.text-darken-4, .col.s12.card-panel.teal.orange.lighten-2.white-text
