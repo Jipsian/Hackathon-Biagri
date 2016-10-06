@@ -1,53 +1,52 @@
 <br>
-<div class="green-text  align center">
+<div class="green-text text-darken-3 align center">
     <h1>ESPACE ACHETEUR</h1>
-    <h2>Trouvez l'offre qui vous correspond</h2>
+    <h2>Postez une nouvelle offre </h2>
 </div>
 
 <br>
 <div class="">
-    <div class="card-panel teal green darken-3 white-text">
-        <p>
-            <strong>Veuillez remplir les champs suivants</strong>
-        </p>
+    <div class="card-panel teal green darken-3 white-text align center">
+        <h2>
+          Veuillez remplir les champs suivants :
+        </h2>
     </div>
 
-    <form class="col s12 card-panel teal green lighten-1 white-text ">
+    <form class="col s12 card-panel teal white green-text text-darken-3 ">
         <div class="row">
             <div class="input-field col s6">
-                <p>Ville D'origine</p>
+                <h3>Ville D'origine</h3>
             </div>
             <div class="input-field col s6">
-                <select class="browser-default black-text">
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
+                <select class="browser-default green-text text-darken-3">
+                    <option value="" disabled selected>Choisissez votre option</option>
+                    <option value="1">Paris</option>
+                    <option value="2">Rouen</option>
                 </select>
             </div>
         </div>
     </form>
 
-    <form class="col s12 card-panel teal green darken-3 white-text ">
+    <form class="col s12 card-panel teal green darken-3 white-text">
         <div class="row">
             <div class="input-field col s6">
-                <p>Produit</p>
+                <h3>Produit</h3>
             </div>
             <div class="input-field col s6">
                 <select class="browser-default black-text">
-                    <option value="" disabled selected>Choose your option</option>
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
+                    <option value="" disabled selected>Choisissez votre option</option>
+                    <option value="1">Blé</option>
+                    <option value="2">Mais</option>
+                    <option value="3">Colza</option>
                 </select>
             </div>
         </div>
     </form>
 
-    <form class="col s12 card-panel teal green lighten-1 white-text ">
+    <form class="col s12 card-panel teal white green-text text-darken-3 ">
         <div class="row">
             <div class="input-field col s6">
-                <p>Quantité</p>
+                <h3>Quantité</h3>
             </div>
             <div class="input-field col s6">
                 <form id='myform' method='POST' action='#' class="row ">
@@ -55,7 +54,7 @@
                     <input id='minus' type='button' value='-' class='btn-floating btn-large waves-effect waves-light green darken-3 white-text'  field='quantity'/>
                     </div>
                     <div class="col s8">
-                    <input type='text' name='quantity' value='0' class='qty white-text center-align center align-center' style='font-size:20pt'/>
+                    <input type='text' name='quantity' value='0' class='qty green-text text-darken-3 center-align center align-center' style='font-size:20pt'/>
                     </div>
                     <div class="col s2">
                     <input id='plus' type='button' value='+' class='btn-floating btn-large waves-effect waves-light green darken-3 white-text' field='quantity'/>
@@ -68,7 +67,7 @@
     <form class="col s12 card-panel teal green darken-3 white-text ">
         <div class="row">
             <div class="input-field col s6">
-                <p>Qualité</p>
+                <h3>Qualité</h3>
             </div>
             <div class="input-field col s6 black-text">
                 <ul class="collapsible" data-collapsible="accordion">
@@ -76,7 +75,7 @@
                         <div class="collapsible-header white">
                             <i class="material-icons">filter_drama</i>First</div>
                         <div class="collapsible-body white">
-                            <p>Lorem ipsum dolor sit amet.</p>
+                            <h5>Lorem ipsum dolor sit amet.</h5>
                         </div>
                     </li>
                 </div>
@@ -88,14 +87,14 @@
         <form class="col s12">
             <div class="row">
                 <div class="  col s6 align center">
-                    <button class="btn waves-effect waves-light green" type="submit" name="action">Submit
-                        <i class="material-icons right">send</i>
+                    <button class="btn waves-effect waves-light green darken-3" type="submit" name="action">Valider
+                        <i class="material-icons right">done</i>
                     </button>
                 </div>
 
                 <div class="col s6 align center">
-                    <button class="btn waves-effect waves-light red" type="submit" name="action">Submit
-                        <i class="material-icons right">send</i>
+                    <button  class="btn waves-effect waves-light red darken-2"  type="submit" name="action">Corriger
+                        <i class="material-icons right">clear</i>
                     </button>
                 </div>
             </div>
