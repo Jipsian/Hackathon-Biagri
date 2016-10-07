@@ -6,7 +6,6 @@
             <input type="text" class="form-control" placeholder="Prix de vente" ng-model='vm.todo.prixLivre'>
             <input type="text" class="form-control" placeholder="Quantité" ng-model='vm.todo.quantite'>
             <input type="text" class="form-control" placeholder="Ville d'origine" ng-model='vm.todo.villeOrigine'>
-            <input type="text" class="form-control" placeholder="Ville de destination" ng-model='vm.todo.villeDestination'>
         </div>
         <button ng-click='vm.create(vm.todo)' class="btn btn-default">Add</button>
     </form>
