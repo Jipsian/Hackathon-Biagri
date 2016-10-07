@@ -17,10 +17,10 @@
         <form class="col s12 card-panel white orange-text text-darken-4">
             <div class="row">
                 <div class="input-field col s6 orange-text text-darken-4">
-                    <h3>Votre code postal</h3>
+                    <h3>Votre ville</h3>
                 </div>
                 <div class="input-field col s6">
-                  <input placeholder="Exemple : 28250" id="first_name" type="text" class="validate">
+                  <input placeholder="Saisir votre ville" id="first_name" type="text" class="validate" ng-model='vm.search.villeDest'>
                 </div>
             </div>
         </form>
@@ -31,7 +31,7 @@
                     <h3>Produit</h3>
                 </div>
                 <div class="input-field col s6">
-                    <select class="browser-default orange-text">
+                    <select class="browser-default orange-text" ng-model='vm.search.produit'>
                         <option value="" disabled selected>Sélectionnez un produit</option>
                         <option value="1">Blé</option>
                         <option value="2">Maïs</option>
@@ -52,7 +52,7 @@
                             <input id='minus' type='button' value='-' class='btn-floating btn-large waves-effect waves-light orange darken-4 white-text' field='quantity'/>
                         </div>
                         <div class="col s8">
-                            <input type='text' name='prix' value='0' class='qty orange-text text-darken-4 center-align center align-center' style='font-size:20pt'/>
+                            <input type='text' name='prix' value='0' class='qty orange-text text-darken-4 center-align center align-center' style='font-size:20pt' ng-model='vm.search.prix'/>
                         </div>
                         <div class="col s2">
                             <input id='plus' type='button' value='+' class='btn-floating btn-large waves-effect waves-light orange darken-4 white-text' field='quantity'/>
@@ -72,7 +72,7 @@
                             <input id='minusqt' type='button' value='-' class='btn-floating btn-large waves-effect waves-light orange darken-4 white-text' field='quantity'/>
                         </div>
                         <div class="col s8">
-                            <input type='text' name='quantity' value='0' class='qty white-text center-align center align-center' style='font-size:20pt'/>
+                            <input type='text' name='quantity' value='0' class='qty white-text center-align center align-center' style='font-size:20pt' ng-model='vm.search.quantite'/>
                         </div>
                         <div class="col s2">
                             <input id='plusqt' type='button' value='+' class='btn-floating btn-large waves-effect waves-light orange darken-4 white-text' field='quantity'/>
@@ -106,7 +106,7 @@
     <form class="col s12">
         <div class="row">
             <div class="col s12 align center">
-                <button class="btn waves-effect waves-light deep-orange darken-1" type="submit" name="action">Rechercher
+                <button class="btn waves-effect waves-light deep-orange darken-1" ng-click="vm.filter(vm.search)" type="submit" name="action">Rechercher
                     <i class="material-icons right">search</i>
                 </button>
             </div>
@@ -117,29 +117,28 @@
 </br>
 
 <!-- recherche -->
-
 <div id="results_farmers">
 <div class="card-panel teal deep-orange accent-3 white-text align center">
     <h2>
         Les offres qui vous correspondent :
     </h2>
 </div>
+<div class="panel panel-default" ng-repeat='todo in vm.todos | orderBy: "produit"'>
+  <form class="form-inline col s12 card-panel white orange-text text-darken-4">
+      <div class="row" ng-init='vm.CalculTrajet(todo.villeOrigine,vm.dest,$index)'>
+        <div class="input-field col s12">
+          <input type="text" class="form-control col s2" placeholder="Todo" ng-model='todo.produit'>
+          <input type="text" class="form-control col s4" placeholder="Todo">
+          <input type="text" class="form-control col s2" placeholder="Todo" ng-model='todo.quantite'>
+          <div class="">
+            <input type="text" class="form-control col s2" placeholder="Todo" ng-model='todo.prixLivre'>
+            <h5 id='prix{{$index}}'></h5>
+            <h5 ng-init='vm.test = "test"+$index'>{{(todo.prixLivre*todo.quantite)-(vm.calcul[vm.test]*todo.quantite)}}</h5>
+          </div>
 
-<form class="col s12 card-panel white orange-text text-darken-4">
-    <div class="row">
-        <div class="col s4">Produit</div>
-        <div class="col s6">Je suis un produit de qualité</div>
-        <div class="col s2">€</div>
-    </div>
-</form>
 
-<form class="col s12 card-panel teal orange lighten-2 white-text">
-    <div class="row">
-        <div class="col s4">Produit</div>
-        <div class="col s6">Je suis un produit de qualité</div>
-        <div class="col s2">€</div>
-    </div>
-</form>
+      </div>
+      </div>
+  </form>
 </div>
-
 </br>

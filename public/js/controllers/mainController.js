@@ -5,7 +5,8 @@ class mainController {
       this.$scope = $scope;
       this.load();
       this.$scope.prix = {};
-      this.dest = "bonsecours";
+      this.calcul = {};
+      this.dest = "Canteleu";
       this.tableau = [
         {
           km: '5',
@@ -14,7 +15,7 @@ class mainController {
         },
         {
           km: '10',
-          rouen: 3.39,
+          Rouen: 3.39,
           paris: 3.82
         },
         {
@@ -26,6 +27,21 @@ class mainController {
           km: '20',
           rouen: 4.18,
           paris: 4.72
+        },
+        {
+          km: '25',
+          rouen: 4.53,
+          paris: 5.12
+        },
+        {
+          km: '30',
+          rouen: 4.87,
+          paris: 5.49
+        },
+        {
+          km: '35',
+          rouen: 5.21,
+          paris: 5.89
         }
       ];
       this.tableauKm50 = [5, 10, 15, 20, 25, 30, 40, 45, 50];
@@ -49,8 +65,15 @@ class mainController {
         });
     }
 
+    filter(info){
+      console.log(info);
+      this.dest = info.villeDest;
+      this.load()
+
+    }
+
     CalculTrajet(origin,dest,DOMindex) {
-console.log("passe");
+      console.log(origin,dest,DOMindex);
         var req = new XMLHttpRequest();
         // req.open('GET', 'http://dev.virtualearth.net/REST/V1/Routes/Driving?o=json&wp.0=' + originCity + '&wp.1=' + destCity + '&avoid=minimizeTolls&key=Am2XYcqAXud-xS-yQlvgOKanGcheJjH64DYlyEq_9nduDHZY6hFxXAOruOiDbU7v');
 
@@ -64,11 +87,11 @@ console.log("passe");
                 // document.getElementById('time').innerHTML = "<span>'Le temps de trajet est de : " + (response.rows[0].elements[0].duration.value) / 3600 + "</span>";
                 // console.log(response);
                 var distance = (response.rows[0].elements[0].distance.value)/1000;
+                console.log(distance);
                 if (distance < 50) {
                   for (var index50 in this.tableauKm50) {
                     if ((this.tableauKm50[index50] - distance) > 0 ) {
                         this.$scope.prix[DOMindex] = this.tableau[index50][origin];
-                        console.log(this.$scope.prix[DOMindex]);
                         this.$scope.$apply();
                         break;
                     }
@@ -85,6 +108,8 @@ console.log("passe");
               }
                 var calcul = distance * this.$scope.prix[DOMindex];
                 console.log(calcul);
+                var test = 'test'+DOMindex;
+                this.calcul[test] = calcul;
                 $('#prix'+DOMindex).html(calcul);
                 // console.log(calcul);
             }
