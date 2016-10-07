@@ -11,7 +11,7 @@ class mainController {
 
       jQuery(document).ready(function(){
   // This button will increment the value
-  
+
   $('#plusqt').click(function(e){
       // Stop acting like a button
       e.preventDefault();
