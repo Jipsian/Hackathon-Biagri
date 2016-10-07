@@ -38,11 +38,20 @@ h3
   border: 2px solid green;
 }
 
+#form_sellers
+{
+border: 2px solid #ff6624;
+}
 
-.col.s12.card-panel.teal.white.green-text.text-darken-3, .col.s12.card-panel.teal.green.darken-3.white-text, .col.s12.card-panel.teal.white.green-text.text-darken-3, .col.s12.card-panel.teal.green.darken-3.white-text
+#results_sellers
+{
+  border: 2px solid #ff6624;
+}
+
+/*.col.s12.card-panel.teal.white.green-text.text-darken-3, .col.s12.card-panel.teal.green.darken-3.white-text, .col.s12.card-panel.teal.white.green-text.text-darken-3, .col.s12.card-panel.teal.green.darken-3.white-text
 {
   border:  2px solid green;
-}
+}*/
 
 /*Agriculteurs*/
 
@@ -51,11 +60,17 @@ h3
   margin: 0;
   box-shadow: none;
   font-weight: bold;
+  padding: 5px 0 5px 0;
 }
 
 #form_farmers
 {
 border: 2px solid #ff6624;
+}
+
+#results_farmers
+{
+  border: 2px solid #ff6624;
 }
 
 .qty.orange-text.text-darken-4.center-align.center.align-center
@@ -66,9 +81,4 @@ border: 2px solid #ff6624;
 .qty.white-text.center-align.center.align-center
 {
   border: 2px solid white;
-}
-
-#results_farmers
-{
-  border: 2px solid #ff6624;
 }

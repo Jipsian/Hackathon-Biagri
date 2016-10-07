@@ -20,7 +20,7 @@
             </div>
             <div class="input-field col s6">
                 <select name="selectVille" class="browser-default green-text text-darken-3" ng-model='todo.villeOrigine'>
-                    <option value="" disabled selected>Choisissez votre option</option>
+                    <option value="" disabled selected>Veuillez sélectionner une ville</option>
                     <option value="Paris">Paris</option>
                     <option value="Rouen">Rouen</option>
                 </select>
@@ -34,8 +34,8 @@
                 <h3>Produit</h3>
             </div>
             <div class="input-field col s6">
-                <select name="selectProduit" class="browser-default black-text" ng-model='vm.todo.produit'>
-                    <option value="" disabled selected>Choisissez votre option</option>
+                <select name="selectProduit" class="browser-default green-text text-darken-3" ng-model='vm.todo.produit'>
+                    <option value="" disabled selected>Veuillez sélectionner un produit</option>
                     <option value="Blé">Blé</option>
                     <option value="Maïs">Maïs</option>
                     <option value="Colza">Colza</option>
@@ -44,74 +44,72 @@
         </div>
     </form>
 
-                <select name="selectVille" class="browser-default
-    <form class="col s12 card-panel teal white green-text text-darken-3 ">
+
+    <form class=" col s12 card-panel teal white green-text text-darken-3 ">
         <div class="row">
             <div class="input-field col s6">
                 <h3>Prix</h3>
             </div>
             <div class="input-field col s6">
-              <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                <input placeholder="Veuillez indiquer le prix de vente (en €/T). Exemple : 205.45" id="first_name" type="text" class="validate">
             </div>
         </div>
     </form>
-
 
     <form class="col s12 card-panel teal green darken-3 white-text ">
-        <div class="row">
-            <div class="input-field col s6">
-                <h3>Quantité</h3>
-            </div>
-            <div class="input-field col s6">
-                <!--<form id='myform' method='POST' action='#' class="row ">
-                    <div class="col s2">
-                        <input id='minusqt' type='button' value='-' class='btn-floating btn-large waves-effect waves-light white darken-4 green-text' field='quantity'/>
-                    </div>
-                    <div class="col s8"> -->
-                        <input placeholder="Placeholder" id="first_name" type="text" class="validate" ng-model='vm.todo.quantite'/>
-                    <!-- </div>
-                <select name="selectVille" class="browser-default
-                    <div class="col s2">
-                        <input id='plusqt' type='button' value='+' class='btn-floating btn-large waves-effect waves-light white darken-4 green-text' field='quantity'/>
-                    </div>-->
-                </div>
-                </form>
-            </div>
+    <div class="row">
+        <div class="input-field col s6">
+            <h3>Quantité proposée</h3>
         </div>
-    </form>
-
-    <form class="col s12 card-panel teal white green-text text-darken-3">
-        <div class="row">
-            <div class="input-field col s6">
-                <h3>Qualité</h3>
-            </div>
-            <div class="input-field col s6 black-text">
-                <ul class="collapsible" data-collapsible="accordion">
-                    <li>
-                        <div class="collapsible-header white">
-                            <i class="material-icons">filter_drama</i>First</div>
-                        <div class="collapsible-body white">
-                            <h5>Lorem ipsum dolor sit amet.</h5>
-                        </div>
-                    </li>
+        <div class="input-field col s6">
+            <!--<form id='myform' method='POST' action='#' class="row ">
+                <div class="col s2">
+                    <input id='minusqt' type='button' value='-' class='btn-floating btn-large waves-effect waves-light white darken-4 green-text' field='quantity'/>
                 </div>
+                <div class="col s8"> -->
+                    <input placeholder="Veuillez indiquer la quantité (en tonne(s)). Exemple : 10" id="first_name" type="text" class="validate" ng-model='vm.todo.quantite'/>
+                <!-- </div>
+                <div class="col s2">
+                    <input id='plusqt' type='button' value='+' class='btn-floating btn-large waves-effect waves-light white darken-4 green-text' field='quantity'/>
+                </div>-->
             </div>
-        </form>
+            </form>
+        </div>
     </div>
-    <br>
+</form>
 
-    <form class="col s12">
-        <div class="row">
-            <div class="  col s6 align center">
-                <button class="btn waves-effect waves-light orange darken-2" type="submit" name="action">Corriger
-                    <i class="material-icons right">clear</i>
-                </button>
-            </div>
-
-            <div class="col s6 align center">
-                <button ng-click='vm.create(vm.todo)' class="btn waves-effect waves-light green darken-3" type="submit" name="action">Valider
-                    <i class="material-icons right">done</i>
-                </button>
+<form class="col s12 card-panel teal white green-text text-darken-3">
+    <div class="row">
+        <div class="input-field col s6">
+            <h3>Qualité</h3>
+        </div>
+        <div class="input-field col s6 black-text">
+            <ul class="collapsible" data-collapsible="accordion">
+                <li>
+                    <div class="collapsible-header white">
+                        <i class="material-icons">filter_drama</i>First</div>
+                    <div class="collapsible-body white">
+                        <h5>Lorem ipsum dolor sit amet.</h5>
+                    </div>
+                </li>
             </div>
         </div>
     </form>
+</div>
+<br>
+
+<form class="col s12">
+    <div class="row">
+        <div class="  col s6 align center">
+            <button class="btn waves-effect waves-light orange darken-2" type="submit" name="action">Corriger
+                <i class="material-icons right">clear</i>
+            </button>
+        </div>
+
+        <div class="col s6 align center">
+            <button ng-click='vm.create(vm.todo)' class="btn waves-effect waves-light green darken-3" type="submit" name="action">Valider
+                <i class="material-icons right">done</i>
+            </button>
+        </div>
+    </div>
+</form>
