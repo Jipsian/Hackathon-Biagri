@@ -19,7 +19,7 @@
                 <h3>Ville d'origine</h3>
             </div>
             <div class="input-field col s6">
-                <select name="selectVille" class="browser-default green-text text-darken-3" ng-model='todo.villeOrigine'>
+                <select name="selectVille" class="browser-default green-text text-darken-1" ng-model='todo.villeOrigine'>
                     <option value="" disabled selected>Veuillez sélectionner une ville</option>
                     <option value="Paris">Paris</option>
                     <option value="Rouen">Rouen</option>
@@ -28,13 +28,13 @@
         </div>
     </form>
 
-    <form class="col s12 card-panel teal green darken-3 white-text">
+    <form class="col s12 card-panel teal green darken-1 white-text">
         <div class="row">
             <div class="input-field col s6">
                 <h3>Produit</h3>
             </div>
             <div class="input-field col s6">
-                <select name="selectProduit" class="browser-default green-text text-darken-3" ng-model='vm.todo.produit'>
+                <select name="selectProduit" class="browser-default green-text text-darken-1" ng-model='vm.todo.produit'>
                     <option value="" disabled selected>Veuillez sélectionner un produit</option>
                     <option value="Blé">Blé</option>
                     <option value="Maïs">Maïs</option>
@@ -55,7 +55,7 @@
         </div>
     </form>
 
-    <form class="col s12 card-panel teal green darken-3 white-text ">
+    <form class="col s12 card-panel teal green darken-1 white-text ">
         <div class="row">
             <div class="input-field col s6">
                 <h3>Quantité proposée</h3>
@@ -105,10 +105,11 @@
         </button>
     </div>
 
-    <div class="col s6 align center">
-        <button ng-click='vm.create(vm.todo)' class="btn waves-effect waves-light green darken-3" type="submit" name="action">Valider
-            <i class="material-icons right">done</i>
-        </button>
+        <div class="col s6 align center">
+            <button ng-click='vm.create(vm.todo)' class="btn waves-effect waves-light green darken-1" type="submit" name="action">Valider
+                <i class="material-icons right">done</i>
+            </button>
+        </div>
     </div>
 </div>
 </form>
