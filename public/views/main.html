@@ -1,14 +1,15 @@
 <br>
 <div class="green-text text-darken-3 align center">
     <h1>ESPACE ACHETEUR</h1>
-    <h2>Postez une nouvelle offre </h2>
+    <h2>Postez une nouvelle offre
+    </h2>
 </div>
 
 <br>
 <div class="">
     <div class="card-panel teal green darken-3 white-text align center">
         <h2>
-          Veuillez remplir les champs suivants :
+            Veuillez remplir les champs suivants :
         </h2>
     </div>
 
@@ -18,10 +19,10 @@
                 <h3>Ville d'origine</h3>
             </div>
             <div class="input-field col s6">
-                <select class="browser-default green-text text-darken-3">
+                <select name="selectVille" class="browser-default green-text text-darken-3" ng-model='todo.villeOrigine'>
                     <option value="" disabled selected>Choisissez votre option</option>
-                    <option value="1">Paris</option>
-                    <option value="2">Rouen</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Rouen">Rouen</option>
                 </select>
             </div>
         </div>
@@ -33,11 +34,11 @@
                 <h3>Produit</h3>
             </div>
             <div class="input-field col s6">
-                <select class="browser-default black-text">
+                <select name="selectProduit" class="browser-default black-text" ng-model='vm.todo.produit'>
                     <option value="" disabled selected>Choisissez votre option</option>
-                    <option value="1">Blé</option>
-                    <option value="2">Mais</option>
-                    <option value="3">Colza</option>
+                    <option value="Blé">Blé</option>
+                    <option value="Maïs">Maïs</option>
+                    <option value="Colza">Colza</option>
                 </select>
             </div>
         </div>
@@ -49,7 +50,7 @@
                 <h3>Prix</h3>
             </div>
             <div class="input-field col s6">
-              <input placeholder="Placeholder" id="first_name" type="text" class="validate">  
+              <input placeholder="Placeholder" id="first_name" type="text" class="validate">
             </div>
         </div>
     </form>
@@ -62,14 +63,14 @@
             </div>
             <div class="input-field col s6">
                 <form id='myform' method='POST' action='#' class="row ">
-                  <div class="col s2">
-                    <input id='minus' type='button' value='-' class='btn-floating btn-large waves-effect waves-light white  green-text text-darken-3'  field='prix'/>
+                    <div class="col s2">
+                        <input id='minus' type='button' value='-' class='btn-floating btn-large waves-effect waves-light white darken-3 green-text' field='quantity'/>
                     </div>
                     <div class="col s8">
-                    <input type='text' name='prix' value='0' class='qty white-text text-white center-align center align-center' style='font-size:20pt'/>
+                        <input type='text' name='quantity' value='0' class='qty white-text text-darken-3 center-align center align-center' style='font-size:20pt'/>
                     </div>
                     <div class="col s2">
-                    <input id='plus' type='button' value='+' class='btn-floating btn-large waves-effect waves-light white green-text text-darken-3' field='prix'/>
+                        <input id='plus' type='button' value='+' class='btn-floating btn-large waves-effect waves-light white darken-3 green-text' field='quantity'/>
                     </div>
                 </form>
             </div>
@@ -93,21 +94,21 @@
                 </div>
             </div>
         </form>
-</div>
-        <br>
+    </div>
+    <br>
 
-        <form class="col s12">
-            <div class="row">
-                <div class="  col s6 align center">
-                  <button  class="btn waves-effect waves-light red darken-2"  type="submit" name="action">Corriger
-                      <i class="material-icons right">clear</i>
-                  </button>
-                </div>
-
-                <div class="col s6 align center">
-                  <button class="btn waves-effect waves-light green darken-3" type="submit" name="action">Valider
-                      <i class="material-icons right">done</i>
-                  </button>
-                </div>
+    <form class="col s12">
+        <div class="row">
+            <div class="  col s6 align center">
+                <button class="btn waves-effect waves-light red darken-2" type="submit" name="action">Corriger
+                    <i class="material-icons right">clear</i>
+                </button>
             </div>
-        </form>
+
+            <div class="col s6 align center">
+                <button ng-click='vm.create(vm.todo)' class="btn waves-effect waves-light green darken-3" type="submit" name="action">Valider
+                    <i class="material-icons right">done</i>
+                </button>
+            </div>
+        </div>
+    </form>
