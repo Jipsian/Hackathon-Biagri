@@ -29,6 +29,7 @@ h3
 {
   margin: 0;
   box-shadow: none;
+
 }
 
 
@@ -38,9 +39,14 @@ h3
   border: 2px solid green;
 }
 
+.browser-default.orange-text.text-darken-1
+{
+  border: 2px solid orange;
+}
+
 #form_sellers
 {
-border: 4px solid #33691e;
+border: 4px solid #2e7d32;
 }
 
 /*Agriculteurs*/
