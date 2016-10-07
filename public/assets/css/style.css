@@ -1,7 +1,8 @@
 .logo
 {
-  width: 40%;
+  width: 45%;
 }
+/*Acheteurs*/
 
 h1
 {
@@ -47,7 +48,7 @@ h3
   border:  2px solid green;
 }
 
-/*SEPARATION*/
+/*Agriculteurs*/
 
 .card-panel.teal.deep-orange.accent-3.white-text, .col.s12.card-panel.white.orange-text.text-darken-4, .col.s12.card-panel.teal.orange.lighten-2.white-text
 {
@@ -73,5 +74,5 @@ border: 2px solid #ff6624;
 
 #results_farmers
 {
-border: 2px solid #ff6624;
+  border: 2px solid #ff6624;
 }

@@ -11,6 +11,6 @@ const routes = ($routeProvider, $httpProvider) => {
         })
         .otherwise({
             redirectTo: '/'
-        })
+        });
 
-}
+};
