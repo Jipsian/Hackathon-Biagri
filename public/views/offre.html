@@ -1,0 +1,24 @@
+<div id="results_farmers">
+<div class="card-panel teal deep-orange accent-3 white-text align center">
+    <h2>
+        Les offres qui vous correspondent :
+    </h2>
+</div>
+<div class="panel panel-default" ng-repeat='todo in vm.todos | orderBy: "produit"'>
+  <form class="form-inline col s12 card-panel white orange-text text-darken-4">
+      <div class="row" ng-init='vm.CalculTrajet(todo.villeOrigine,vm.dest,$index)'>
+        <div class="input-field col s12">
+          <input type="text" class="form-control col s2" placeholder="Todo" ng-model='todo.produit'>
+          <input type="text" class="form-control col s4" placeholder="Todo">
+          <input type="text" class="form-control col s2" placeholder="Todo" ng-model='todo.quantite'>
+          <div class="">
+            <input type="text" class="form-control col s2" placeholder="Todo" ng-model='todo.prixLivre'>
+            <h5 id='prix{{$index}}'></h5>
+            <h5 ng-init='vm.test = "test"+$index'>{{(todo.prixLivre*todo.quantite)-(vm.calcul[vm.test]*todo.quantite)}}</h5>
+          </div>
+
+
+      </div>
+      </div>
+  </form>
+</div>

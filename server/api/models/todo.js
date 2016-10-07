@@ -1,7 +1,12 @@
 import mongoose from 'mongoose';
 
 const todoSchema = new mongoose.Schema({
-    description: String
+    produit: String,
+    prixLivre: Number,
+    quantite: Number,
+    villeOrigine: String,
+    villeDestination: String,
+    prixNet: Number
 });
 
 let model = mongoose.model('Todo', todoSchema);
@@ -29,8 +34,13 @@ export default class Todo {
     }
 
     create(req, res) {
+      console.log(req.body);
         model.create({
-                description: req.body.description
+                produit: req.body.produit,
+                prixLivre: req.body.prixLivre,
+                quantite: req.body.quantite,
+                villeOrigine: req.body.villeOrigine,
+                villeDestination: req.body.villeDestination
             },
             (err, todo) => {
                 if (err) {
@@ -45,12 +55,17 @@ export default class Todo {
         model.update({
             _id: req.params.id
         }, {
-            description: req.body.description
+          produit: req.body.produit,
+          prixLivre: req.body.prixLivre,
+          quantite: req.body.quantite,
+          villeOrigine: req.body.villeOrigine,
+          villeDestination: req.body.villeDestination
         }, (err, todo) => {
             if (err || !todo) {
                 res.status(500).send(err.message);
             } else {
                 res.json(todo);
+                console.log(todo);
             }
         });
     }
@@ -62,6 +77,6 @@ export default class Todo {
             } else {
                 res.sendStatus(200);
             }
-        })
+        });
     }
 }

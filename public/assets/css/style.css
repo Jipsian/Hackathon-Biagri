@@ -1,14 +1,66 @@
 .logo
 {
-  width: 40%;
+  width: 45%;
 }
 
-.card-panel.teal.green.darken-3.white-text, .col.s12.card-panel.teal.green.lighten-1.white-text, .col.s12.card-panel.teal.green.darken-3.white-text
+
+h1
+{
+  font-weight : bold;
+  font-size: 55px;
+  margin:  0;
+}
+
+h2
+{
+  font-weight: bold;
+  font-size: 30px;
+  margin: 5px;
+}
+
+h3
+{
+  font-weight: bold;
+  font-size: 20px;
+  margin: 15px;
+}
+
+
+/*Acheteurs*/
+
+.card-panel.teal.green.darken-3.white-text.align.center, .col.s12.card-panel.teal.white.green-text /*Contour des box + zone d'ombre*/
 {
   margin: 0;
+  box-shadow: none;
 }
 
-.qty.white-text
+
+
+.browser-default.green-text.text-darken-1 /*Contour dropdown ville d'origine*/
 {
-  border-bottom: none;
+  border: 2px solid green;
+}
+
+#form_sellers  /*Formulaire*/
+{
+border: 4px solid #33691e;
+}
+
+/*Agriculteurs*/
+
+.card-panel.teal.orange.darken-3.white-text, .col.s12.card-panel.white.orange-text.text-darken-4, .col.s12.card-panel.teal.orange.lighten-2.white-text /*Contour sélection Contour des box + zone d'ombre* : AGRI */
+{
+  margin: 0;
+  box-shadow: none;
+  font-weight: bold;
+}
+
+#form_farmers
+{
+border: 4px solid #ef6c00;
+}
+
+#results_farmers
+{
+border: 4px solid #ef6c00;
 }

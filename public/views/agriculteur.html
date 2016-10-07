@@ -1,0 +1,181 @@
+<br>
+<!-- header -->
+<div class="orange-text text-darken-3 align center">
+    <h1>ESPACE AGRICULTEUR</h1>
+    <h2>Trouvez l'offre qui vous correspond</h2>
+</div>
+
+<br>
+    <!-- Formulaire agriculteurs -->
+    <div id="form_farmers">
+        <div class="card-panel teal orange darken-3 white-text align center">
+            <h2>
+                Veuillez remplir les champs suivants :
+            </h2>
+        </div>
+
+        <form class="col s12 card-panel white orange-text text-darken-4">
+            <div class="row">
+                <div class="input-field col s6 orange-text text-darken-4">
+                    <h3>Votre ville</h3>
+                </div>
+                <div class="input-field col s6">
+                  <input placeholder="Saisir votre ville" id="first_name" type="text" class="validate" ng-model='vm.search.villeDest'>
+                </div>
+            </div>
+        </form>
+
+        <form class="col s12 card-panel teal orange lighten-2 white-text">
+            <div class="row">
+                <div class="input-field col s6">
+                    <h3>Produit</h3>
+                </div>
+                <div class="input-field col s6">
+                    <select class="browser-default orange-text text-darken-4" ng-model='vm.search.produit'>
+                        <option value="" disabled selected>Sélectionnez un produit</option>
+                        <option value="1">Blé</option>
+                        <option value="2">Maïs</option>
+                        <option value="3">Colza</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+
+        <form class="col s12 card-panel white orange-text text-darken-4">
+            <div class="row">
+                <div class="input-field col s6">
+                    <h3>Prix</h3>
+                </div>
+                <div class="input-field col s6">
+                    <form id="myform" method='POST' action='#' class="row ">
+                        <input placeholder="Veuillez indiquer le prix de vente (en €/T). Exemple : 205.45" id="prix" type="text" class="validate">
+                    </form>
+                </div>
+            </div>
+        </form>
+
+        <form class="col s12 card-panel teal orange lighten-2 white-text">
+            <div class="row">
+                <div class="input-field col s6">
+                    <h3>Quantité</h3>
+                </div>
+
+                <div class="input-field col s6">
+                    <form id="myform1" method='POST' action='#' class="row ">
+                        <input placeholder="Veuillez indiquer la quantité (en tonne(s)). Exemple : 10" id="quantité" type="text" class="validate">
+                    </form>
+                </div>
+            </div>
+
+        </form>
+
+        <form class="col s12 card-panel teal white orange-text text-darken-4">
+            <div class="row">
+                <div class="input-field col s6">
+                    <h3>Qualité</h3>
+                </div>
+                <div class="input-field col s6">
+
+                    <div class="input-field col s6">
+                        <select name="selectProduit" class="browser-default orange-text text-darken-1" ng-model='vm.todo.ps'>
+                            <option value="" disabled selected>PS (Poids Spécifique)</option>
+                            <option value=">55 à 60">55 à 60</option>
+                            <option value=">61 à 65">61 à 65</option>
+                            <option value="66 à 70">66 à 70</option>
+                            <option value="70 à 75">70 à 75</option>
+                            <option value="76 à 80">76 à 80</option>
+                            <option value="81 à 85">81 à 85</option>
+                        </select>
+                    </div>
+                    <div class="input-field col s6">
+                        <select name="selectProduit" class="browser-default orange-text text-darken-1" ng-model='vm.todo.proteine'>
+                            <option value="" disabled selected>% Protéines</option>
+                            <option value="7,5 à 10%">7,5 à 10%</option>
+                            <option value="10,01 à 12,5%">10,01 à 12,5%</option>
+                            <option value="12,51 à 15%">12,51 à 15%</option>
+                            <option value="15,01 à 17,5%">15,01 à 17,5%</option>
+                            <option value="17,51 à 20%">17,51 à 20%</option>
+                            <option value="20.01 à 22,5%">20.01 à 22,5%</option>
+                            <option value="22,51 à 25%">22,51 à 25%</option>
+                            <option value="25,01 à 27,5%">25,01 à 27,5%</option>
+                            <option value="27,51 à 30%">27,51 à 30%</option>
+                            <option value="30.01 à 32,5">30.01 à 32,5%</option>
+                            <option value="32,51 à 35%">32,51 à 35%</option>
+                        </select>
+                    </div>
+                    <div class="input-field col s6">
+                        <select name="selectProduit" class="browser-default orange-text text-darken-1" ng-model='vm.todo.humidite'>
+                            <option value="" disabled selected>% Humidité</option>
+                            <option value="0  à 2,5%">0  à 2,5%</option>
+                            <option value="2,51 à 5%">2,51 à 5%</option>
+                            <option value="5,01 à 7,5">5,01 à 7,5</option>
+                            <option value="7,51 à 10%">7,51 à 10%</option>
+                            <option value="10,01 à 12,5%">10,01 à 12,5%</option>
+                            <option value="12,51 à 15%">12,51 à 15%</option>
+                            <option value="15,01 à 17,5%">15,01 à 17,5%</option>
+                            <option value="17,51 à 20%">17,51 à 20%</option>
+                        </select>
+                    </div>
+                    <div class="input-field col s6">
+                        <select name="selectProduit" class="browser-default orange-text text-darken-1" ng-model='vm.todo.produit'>
+                            <option value="" disabled selected>Hagberg</option>
+                            <option value="220 à 250">220 à 250</option>
+                            <option value="251 à 275">251 à 275</option>
+                            <option value="276 à 300">276 à 300</option>
+                            <option value="301 à 325">301 à 325</option>
+                            <option value="326 à 350">326 à 350</option>
+                            <option value="351 à 375">351 à 375</option>
+                            <option value="376 à 400">376 à 400</option>
+                            <option value="401 à 425">401 à 425</option>
+                            <option value="26 à 450">426 à 450</option>
+                            <option value="451 à 475">451 à 475</option>
+                            <option value="476 à 500">476 à 500</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+      </div>
+
+<form class="col s12">
+    <div class="row">
+        <div class="row">
+            <div class="col s12 align center">
+                <div class="col s12 align center">
+                    <button class="btn waves-effect waves-light deep-orange darken-1" ng-click="vm.filter(vm.search)" type="submit" name="action">Rechercher
+                        <i class="material-icons right">search</i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</br>
+
+
+<!-- recherche -->
+<div id="results_farmers">
+<div class="card-panel teal orange darken-3 white-text align center">
+    <h2>
+        Les offres qui vous correspondent :
+    </h2>
+</div>
+<div class="panel panel-default" ng-repeat='todo in vm.todos | orderBy: "produit"'>
+  <form class="form-inline col s12 card-panel white orange-text text-darken-4">
+      <div class="row" ng-init='vm.CalculTrajet(todo.villeOrigine,vm.dest,$index)'>
+        <div class="input-field col s12">
+          <input type="text" class="form-control col s2" placeholder="Todo" ng-model='todo.produit'>
+          <input type="text" class="form-control col s4" placeholder="Todo">
+          <input type="text" class="form-control col s2" placeholder="Todo" ng-model='todo.quantite'>
+          <div class="">
+            <input type="text" class="form-control col s2" placeholder="Todo" ng-model='todo.prixLivre'>
+            <h5 id='prix{{$index}}'></h5>
+            <h5 ng-init='vm.test = "test"+$index'>{{(todo.prixLivre*todo.quantite)-(vm.calcul[vm.test]*todo.quantite)}}</h5>
+          </div>
+
+
+      </div>
+      </div>
+  </form>
+</div>
+</br>
