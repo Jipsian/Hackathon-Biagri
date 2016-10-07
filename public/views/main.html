@@ -6,7 +6,7 @@
 </div>
 
 <br>
-<div class="">
+<div id="form_sellers">
     <div class="card-panel teal green darken-3 white-text align center">
         <h2>
             Veuillez remplir les champs suivants :
@@ -19,7 +19,7 @@
                 <h3>Ville d'origine</h3>
             </div>
             <div class="input-field col s6">
-                <select name="selectVille" class="browser-default green-text text-darken-3" ng-model='vm.todo.villeOrigine'>
+                <select name="selectVille" class="browser-default green-text text-darken-1" ng-model='vm.todo.villeOrigine'>
                     <option value="" disabled selected>Veuillez sélectionner une ville</option>
                     <option value="Paris">Paris</option>
                     <option value="Rouen">Rouen</option>
@@ -28,13 +28,13 @@
         </div>
     </form>
 
-    <form class="col s12 card-panel teal green darken-3 white-text">
+    <form class="col s12 card-panel teal green darken-1 white-text">
         <div class="row">
             <div class="input-field col s6">
                 <h3>Produit</h3>
             </div>
             <div class="input-field col s6">
-                <select name="selectProduit" class="browser-default green-text text-darken-3" ng-model='vm.todo.produit'>
+                <select name="selectProduit" class="browser-default green-text text-darken-1" ng-model='vm.todo.produit'>
                     <option value="" disabled selected>Veuillez sélectionner un produit</option>
                     <option value="Blé">Blé</option>
                     <option value="Maïs">Maïs</option>
@@ -44,38 +44,37 @@
         </div>
     </form>
 
-
     <form class=" col s12 card-panel teal white green-text text-darken-3 ">
         <div class="row">
             <div class="input-field col s6">
                 <h3>Prix</h3>
             </div>
             <div class="input-field col s6">
-                <input placeholder="Veuillez indiquer le prix de vente (en €/T). Exemple : 205.45" id="first_name" type="text" class="validate"  ng-model='vm.todo.prixLivre'>
+                <input placeholder="Veuillez indiquer le prix de vente (en €/T). Exemple : 205.45" id="first_name" type="text" class="validate" ng-model='vm.todo.prixLivre'>
             </div>
         </div>
     </form>
 
-    <form class="col s12 card-panel teal green darken-3 white-text ">
-    <div class="row">
-        <div class="input-field col s6">
-            <h3>Quantité proposée</h3>
-        </div>
-        <div class="input-field col s6">
-            <!--<form id='myform' method='POST' action='#' class="row ">
+    <form class="col s12 card-panel teal green darken-1 white-text ">
+        <div class="row">
+            <div class="input-field col s6">
+                <h3>Quantité proposée</h3>
+            </div>
+            <div class="input-field col s6">
+                <!--<form id='myform' method='POST' action='#' class="row ">
                 <div class="col s2">
                     <input id='minusqt' type='button' value='-' class='btn-floating btn-large waves-effect waves-light white darken-4 green-text' field='quantity'/>
                 </div>
                 <div class="col s8"> -->
-                    <input placeholder="Veuillez indiquer la quantité (en tonne(s)). Exemple : 10" id="first_name" type="text" class="validate" ng-model='vm.todo.quantite'/>
+                <input placeholder="Veuillez indiquer la quantité (en tonne(s)). Exemple : 10" id="first_name" type="text" class="validate" ng-model='vm.todo.quantite'/>
                 <!-- </div>
                 <div class="col s2">
                     <input id='plusqt' type='button' value='+' class='btn-floating btn-large waves-effect waves-light white darken-4 green-text' field='quantity'/>
                 </div>-->
             </div>
-            </form>
-        </div>
+        </form>
     </div>
+
 </form>
 
 <form class="col s12 card-panel teal white green-text text-darken-3">
@@ -83,33 +82,86 @@
         <div class="input-field col s6">
             <h3>Qualité</h3>
         </div>
-        <div class="input-field col s6 black-text">
-            <ul class="collapsible" data-collapsible="accordion">
-                <li>
-                    <div class="collapsible-header white">
-                        <i class="material-icons">filter_drama</i>First</div>
-                    <div class="collapsible-body white">
-                        <h5>Lorem ipsum dolor sit amet.</h5>
-                    </div>
-                </li>
+        <div class="input-field col s6">
+
+            <div class="input-field col s6">
+                <select name="selectProduit" class="browser-default green-text text-darken-1" ng-model='vm.todo.ps'>
+                    <option value="" disabled selected>PS (Poids Spécifique)</option>
+                    <option value="">55 à 60</option>
+                    <option value="">61 à 65</option>
+                    <option value="">66 à 70</option>
+                    <option value="">70 à 75</option>
+                    <option value="">76 à 80</option>
+                    <option value="">81 à 85</option>
+                </select>
+            </div>
+            <div class="input-field col s6">
+                <select name="selectProduit" class="browser-default green-text text-darken-1" ng-model='vm.todo.proteine'>
+                    <option value="" disabled selected>% Protéines</option>
+                    <option value="">7,5 à 10%</option>
+                    <option value="">10,01 à 12,5%</option>
+                    <option value="">12,51 à 15%</option>
+                    <option value="">15,01 à 17,5%</option>
+                    <option value="">17,51 à 20%</option>
+                    <option value="">20.01 à 22,5%</option>
+                    <option value="">22,51 à 25%</option>
+                    <option value="">25,01 à 27,5%</option>
+                    <option value="">27,51 à 30%</option>
+                    <option value="">30.01 à 32,5%</option>
+                    <option value="">32,51 à 35%</option>
+
+                </select>
+            </div>
+            <div class="input-field col s6">
+                <select name="selectProduit" class="browser-default green-text text-darken-1" ng-model='vm.todo.humidite'>
+                    <option value="" disabled selected>% Humidité</option>
+                    <option value="">0  à 2,5%</option>
+                    <option value="">2,51 à 5%</option>
+                    <option value="">5,01 à 7,5</option>
+                    <option value="">7,51 à 10%</option>
+                    <option value="">10,01 à 12,5%</option>
+                    <option value="">12,51 à 15%</option>
+                    <option value="">15,01 à 17,5%</option>
+                    <option value="">17,51 à 20%</option>
+                </select>
+            </div>
+            <div class="input-field col s6">
+                <select name="selectProduit" class="browser-default green-text text-darken-1" ng-model='vm.todo.produit'>
+                    <option value="" disabled selected>Hagberg</option>
+                    <option value="">220 à 250</option>
+                    <option value="">251 à 275</option>
+                    <option value="">276 à 300</option>
+                    <option value="">301 à 325</option>
+                    <option value="">326 à 350</option>
+                    <option value="">351 à 375</option>
+                    <option value="">376 à 400</option>
+                    <option value="">401 à 425</option>
+                    <option value="">426 à 450</option>
+                    <option value="">451 à 475</option>
+                    <option value="">476 à 500</option>
+
+
+                </select>
             </div>
         </div>
-    </form>
+    </div>
+</form>
 </div>
 <br>
 
 <form class="col s12">
-    <div class="row">
-        <div class="  col s6 align center">
-            <button class="btn waves-effect waves-light orange darken-2" type="submit" name="action">Corriger
-                <i class="material-icons right">clear</i>
-            </button>
-        </div>
+<div class="row">
+    <div class="  col s6 align center">
+        <button class="btn waves-effect waves-light orange darken-2" type="submit" name="action">Corriger
+            <i class="material-icons right">clear</i>
+        </button>
+    </div>
 
         <div class="col s6 align center">
-            <button ng-click='vm.create(vm.todo)' class="btn waves-effect waves-light green darken-3" type="submit" name="action">Valider
+            <button ng-click='vm.create(vm.todo)' class="btn waves-effect waves-light green darken-1" type="submit" name="action">Valider
                 <i class="material-icons right">done</i>
             </button>
         </div>
     </div>
+</div>
 </form>
