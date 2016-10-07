@@ -1,48 +1,102 @@
-<div class="col-xs-12 col-md-10 col-md-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
-    <h2>Create a new todo</h2>
-    <form class="form-inline">
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="Produit" ng-model='vm.todo.produit'>
-            <input type="text" class="form-control" placeholder="Prix de vente" ng-model='vm.todo.prixLivre'>
-            <input type="text" class="form-control" placeholder="Quantité" ng-model='vm.todo.quantite'>
-            <input type="text" class="form-control" placeholder="Ville d'origine" ng-model='vm.todo.villeOrigine'>
-            <input type="text" class="form-control" placeholder="Ville de destination" ng-model='vm.todo.villeDestination'>
-        </div>
-        <button ng-click='vm.create(vm.todo)' class="btn btn-default">Add</button>
-    </form>
-    <h2 ng-show='vm.todos.length>0'>My todos</h2>
-    <div class="panel panel-default" ng-repeat='todo in vm.todos | orderBy: "prixLivre"'>
-        <div class="panel-body">
-            <form class="form-inline">
-                <div class="form-group" ng-init='vm.CalculTrajet(todo.villeOrigine,vm.dest,$index)'>
-                    <input type="text" class="form-control" placeholder="Todo" ng-model='todo.produit'>
-                    <input type="text" class="form-control" placeholder="Todo" ng-model='todo.prixLivre'>
-                    <input type="text" class="form-control" placeholder="Todo" ng-model='todo.quantite'>
-                    <input type="text" class="form-control" placeholder="Todo" ng-model='todo.villeOrigine'>
-                    <input type="text" class="form-control" placeholder="Todo" ng-model='todo.villeDestination'>
-                    <input type="text" class="form-control" placeholder="Todo" ng-model='todo.prixNet'>
-                    <h5 id='prix{{$index}}'></h5>
-                </div>
-                <button ng-click='vm.update(todo)' class="btn btn-default">Edit</button>
-                <button ng-click='vm.delete(todo)' class="btn btn-danger">Delete</button>
-            </form>
-        </div>
-    </div>
-    <form class="form-inline">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Ville" ng-model="KM">
-      </div>
-    </form>
+<br>
+<div class="green-text text-darken-3 align center">
+    <h1>ESPACE ACHETEUR</h1>
+    <h2>Postez une nouvelle offre
+    </h2>
 </div>
-<p>
-        Selectionner les villes de départ et d'arrivée :
-    </p>
 
-    <p>
-        <input id="origin" type="text" value="" />
-        <input id="dest" type="text" value="" />
-        <input type="button" id="btn" value="Valider" ng-click="vm.CalculTrajet()"/>
-    </p>
+<br>
+<div class="">
+    <div class="card-panel teal green darken-3 white-text align center">
+        <h2>
+            Veuillez remplir les champs suivants :
+        </h2>
+    </div>
 
-    <p id="distance"></p>
-    <p id="time"></p>
+    <form class="col s12 card-panel teal white green-text text-darken-3 ">
+        <div class="row">
+            <div class="input-field col s6">
+                <h3>Ville d'origine</h3>
+            </div>
+            <div class="input-field col s6">
+                <select name="selectVille" class="browser-default green-text text-darken-3" ng-model='todo.villeOrigine'>
+                    <option value="" disabled selected>Choisissez votre option</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Rouen">Rouen</option>
+                </select>
+            </div>
+        </div>
+    </form>
+
+    <form class="col s12 card-panel teal green darken-3 white-text">
+        <div class="row">
+            <div class="input-field col s6">
+                <h3>Produit</h3>
+            </div>
+            <div class="input-field col s6">
+                <select name="selectProduit" class="browser-default black-text" ng-model='vm.todo.produit'>
+                    <option value="" disabled selected>Choisissez votre option</option>
+                    <option value="Blé">Blé</option>
+                    <option value="Maïs">Maïs</option>
+                    <option value="Colza">Colza</option>
+                </select>
+            </div>
+        </div>
+    </form>
+
+    <form class="col s12 card-panel teal white green-text text-darken-3 ">
+        <div class="row">
+            <div class="input-field col s6">
+                <h3>Quantité</h3>
+            </div>
+            <div class="input-field col s6">
+                <form id='myform' method='POST' action='#' class="row ">
+                    <div class="col s2">
+                        <input id='minus' type='button' value='-' class='btn-floating btn-large waves-effect waves-light green darken-3 white-text' field='quantity'/>
+                    </div>
+                    <div class="col s8">
+                        <input type='text' name='quantity' value='0' class='qty green-text text-darken-3 center-align center align-center' style='font-size:20pt' ng-model='vm.todo.quantite'/>
+                    </div>
+                    <div class="col s2">
+                        <input id='plus' type='button' value='+' class='btn-floating btn-large waves-effect waves-light green darken-3 white-text' field='quantity'/>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </form>
+
+    <form class="col s12 card-panel teal green darken-3 white-text ">
+        <div class="row">
+            <div class="input-field col s6">
+                <h3>Qualité</h3>
+            </div>
+            <div class="input-field col s6 black-text">
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li>
+                        <div class="collapsible-header white">
+                            <i class="material-icons">filter_drama</i>First</div>
+                        <div class="collapsible-body white">
+                            <h5>Lorem ipsum dolor sit amet.</h5>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br>
+
+    <form class="col s12">
+        <div class="row">
+            <div class="  col s6 align center">
+                <button class="btn waves-effect waves-light red darken-2" type="submit" name="action">Corriger
+                    <i class="material-icons right">clear</i>
+                </button>
+            </div>
+
+            <div class="col s6 align center">
+                <button ng-click='vm.create(vm.todo)' class="btn waves-effect waves-light green darken-3" type="submit" name="action">Valider
+                    <i class="material-icons right">done</i>
+                </button>
+            </div>
+        </div>
+    </form>

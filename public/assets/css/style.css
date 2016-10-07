@@ -1,16 +1,77 @@
-.navbar-yellow {
-    background-color: #FFF94D;
-    border: none;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    border-radius: 0;
-    border-bottom: 2px solid black;
+.logo
+{
+  width: 40%;
 }
-.navbar-brand img {
-    max-height: 100%;
-    transition: 0.8s;
+
+h1
+{
+  font-weight : bold;
+  font-size: 55px;
+  margin:  0;
 }
-.navbar-brand:hover img {
-    transform: rotate(360deg);
+
+h2
+{
+  font-weight: bold;
+  font-size: 30px;
+  margin: 5px;
+}
+
+h3
+{
+  font-weight: bold;
+  font-size: 20px;
+  margin: 15px;
+}
+
+.card-panel.teal.green.darken-3.white-text.align.center, .col.s12.card-panel.teal.white.green-text, .col.s12.card-panel.teal.green.darken-3.white-text
+{
+  margin: 0;
+  box-shadow: none;
+}
+
+.qty.green-text.text-darken-3.center-align.center.align-center
+{
+  border: 2px solid green;
+  margin:  0;
+}
+
+.browser-default.green-text.text-darken-3
+{
+  border: 2px solid green;
+}
+
+
+.col.s12.card-panel.teal.white.green-text.text-darken-3, .col.s12.card-panel.teal.green.darken-3.white-text, .col.s12.card-panel.teal.white.green-text.text-darken-3, .col.s12.card-panel.teal.green.darken-3.white-text
+{
+  border:  2px solid green;
+}
+
+/*SEPARATION*/
+
+.card-panel.teal.deep-orange.accent-3.white-text, .col.s12.card-panel.white.orange-text.text-darken-4, .col.s12.card-panel.teal.orange.lighten-2.white-text
+{
+  margin: 0;
+  box-shadow: none;
+  font-weight: bold;
+}
+
+#form_farmers
+{
+border: 2px solid #ff6624;
+}
+
+.qty.orange-text.text-darken-4.center-align.center.align-center
+{
+  border: 2px solid #ff6624;
+}
+
+.qty.white-text.center-align.center.align-center
+{
+  border: 2px solid white;
+}
+
+#results_farmers
+{
+border: 2px solid #ff6624;
 }
