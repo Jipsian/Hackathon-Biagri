@@ -33,7 +33,7 @@ h3
 
 
 
-.browser-default.green-text.text-darken-3
+.browser-default.green-text.text-darken-1
 {
   border: 2px solid green;
 }
@@ -60,7 +60,6 @@ border: 2px solid #ff6624;
   margin: 0;
   box-shadow: none;
   font-weight: bold;
-  padding: 5px 0 5px 0;
 }
 
 #form_farmers
@@ -71,14 +70,4 @@ border: 2px solid #ff6624;
 #results_farmers
 {
   border: 2px solid #ff6624;
-}
-
-.qty.orange-text.text-darken-4.center-align.center.align-center
-{
-  border: 2px solid #ff6624;
-}
-
-.qty.white-text.center-align.center.align-center
-{
-  border: 2px solid white;
 }
