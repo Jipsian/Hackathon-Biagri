@@ -68,7 +68,7 @@ class mainController {
     filter(info){
       console.log(info);
       this.dest = info.villeDest;
-      this.load()
+      this.load();
 
     }
 

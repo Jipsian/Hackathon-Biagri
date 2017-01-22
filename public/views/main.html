@@ -115,7 +115,7 @@
             <div class="input-field col s6">
                 <select name="selectProduit" class="browser-default green-text text-darken-1" ng-model='vm.todo.humidite'>
                     <option value="" disabled selected>% Humidité</option>
-                    <option value="">0  à 2,5%</option>
+                    <option value="">0 à 2,5%</option>
                     <option value="">2,51 à 5%</option>
                     <option value="">5,01 à 7,5</option>
                     <option value="">7,51 à 10%</option>
@@ -140,7 +140,6 @@
                     <option value="">451 à 475</option>
                     <option value="">476 à 500</option>
 
-
                 </select>
             </div>
         </div>
@@ -157,11 +156,11 @@
         </button>
     </div>
 
-        <div class="col s6 align center">
-            <button ng-click='vm.create(vm.todo)' class="btn waves-effect waves-light green darken-1" type="submit" name="action">Valider
-                <i class="material-icons right">done</i>
-            </button>
-        </div>
+    <div class="col s6 align center">
+        <button ng-click='vm.create(vm.todo)' class="btn waves-effect waves-light green darken-1" type="submit" name="action">Valider
+            <i class="material-icons right">done</i>
+        </button>
     </div>
+</div>
 </div>
 </form>
